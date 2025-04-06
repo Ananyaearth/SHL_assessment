@@ -8,6 +8,7 @@ A Retrieval-Augmented Generation (RAG) pipeline for recommending SHL assessments
 - **`get_api_assessment-main/`**: FastAPI app files for API-based deployment on Render.com.
   - **Repo URL**: [https://github.com/Ananyaearth/get_api_assessment](https://github.com/Ananyaearth/get_api_assessment)
   - **Website URL**: [https://get-api-assessment.onrender.com](https://get-api-assessment.onrender.com)
+  - **Example Usage** --> https://get-api-assessment.onrender.com/recommend?query=Java+developers
   - **`app.py`**: FastAPI script serving RAG responses via GET API.
   - **`requirements.txt`**: Dependencies (e.g., FastAPI, FAISS, Sentence Transformers).
   - **`shl_assessments_index.faiss`**: FAISS index for embedded assessment data.
