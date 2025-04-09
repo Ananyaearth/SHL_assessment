@@ -4,6 +4,18 @@ import faiss
 from sentence_transformers import SentenceTransformer
 import streamlit as st
 
+# Test Type mapping (consistent with your FastAPI version)
+test_type_map = {
+    'A': 'Ability & Aptitude',
+    'B': 'Biodata & Situational Judgement',
+    'C': 'Competencies',
+    'D': 'Development & 360',
+    'E': 'Assessment Exercises',
+    'K': 'Knowledge & Skills',
+    'P': 'Personality & Behaviour',
+    'S': 'Simulations'
+}
+
 # Load data and models
 try:
     st.write("Loading CSV...")
@@ -35,11 +47,17 @@ if query:
     results = []
     for idx in indices[0]:
         row = df.iloc[idx]
+        # Process Test Type into a list of full names
+        test_types = str(row['Test Type'])
+        test_type = [test_type_map.get(abbrev.strip(), abbrev.strip()) for abbrev in test_types.split()]
+
         results.append({
             "Assessment Name": f"[{row['Individual Test Solutions']}]({row['URL']})",
+            "Description": row['Description'],  # Added Description column
             "Remote Testing": row['Remote Testing (y/n)'],
             "Adaptive/IRT": row['Adaptive/IRT (y/n)'],
-            "Duration": row['Assessment Length']
+            "Duration": row['Assessment Length'],
+            "Test Type": test_type  # Added Test Type as a list
         })
 
     st.markdown("### 📋 Top Recommendations")
