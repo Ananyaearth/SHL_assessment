@@ -29,5 +29,5 @@ A Retrieval-Augmented Generation (RAG) pipeline for recommending SHL assessments
 ## Overview
 - Scraped SHL data using Selenium in `Data_Acquistion.ipynb`.
 - Experimented with preprocessing, FAISS, and RAG using Google Gemini in `experimentation.ipynb`.
-- Deployed a Streamlit web app via `new_SHL-main/` and finalized an API solution in `get_api_assessment-main/` on Render.com.
+- Deployed a Streamlit web app via `shl_streamlit-main/` and finalized an API solution in `get_api_assessment-main/` on Render.com.
 
