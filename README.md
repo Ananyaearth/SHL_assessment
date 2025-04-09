@@ -13,7 +13,7 @@ A Retrieval-Augmented Generation (RAG) pipeline for recommending SHL assessments
   - **`requirements.txt`**: Dependencies (e.g., FastAPI, FAISS, Sentence Transformers).
   - **`shl_assessments_index.faiss`**: FAISS index for embedded assessment data.
   - **`shl_catalog_detailed.csv`**: Scraped SHL assessment dataset.
-- **`new_SHL-main/`**: Streamlit app files for cloud-hosted web interface.
+- **`shl_streamlit-main/`**: Streamlit app files for cloud-hosted web interface.
   - **Repo URL**: [https://github.com/Ananyaearth/shl_streamlit](https://github.com/Ananyaearth/shl_streamlit) 
   - **Website URL**: [https://newshl.streamlit.app/](https://shlapp.streamlit.app/)
   - **`app.py`**: Streamlit script for interactive web-based querying.
